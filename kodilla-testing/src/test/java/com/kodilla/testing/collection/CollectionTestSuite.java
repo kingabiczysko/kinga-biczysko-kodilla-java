@@ -23,14 +23,15 @@ public class CollectionTestSuite {
     {
         //Given
         ArrayList<Integer> list1 = new ArrayList<Integer>();
-        ArrayList<Integer> list2 = new ArrayList<Integer>();
-        OddNumbersExterminator test1 = new OddNumbersExterminator(list1);
+
+        OddNumbersExterminator test1 = new OddNumbersExterminator();
 
         //When
-        ArrayList <Integer> test = (test1.exterminate());
+        ArrayList <Integer> test = (test1.exterminate(list1));
 
         /* Then */
-        Assert.assertEquals(list2,test);
+
+        Assert.assertEquals(0,test.size());
     }
 
     @Test
@@ -48,11 +49,11 @@ public class CollectionTestSuite {
         numbersOdd.add(2);
         numbersOdd.add(4);
 
-        OddNumbersExterminator numb = new OddNumbersExterminator(numbersAll);
+        OddNumbersExterminator numb = new OddNumbersExterminator();
 
 
         //When
-        ArrayList <Integer> test = (numb.exterminate());
+        ArrayList <Integer> test = (numb.exterminate(numbersAll));
 
         /* Then */
         Assert.assertEquals(numbersOdd,test);

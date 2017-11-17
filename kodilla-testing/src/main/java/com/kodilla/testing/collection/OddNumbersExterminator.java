@@ -4,15 +4,14 @@ import java.util.ArrayList;
 
 public class OddNumbersExterminator {
 
-    private ArrayList<Integer> numbers;
-    private ArrayList<Integer> numbersOdd;
 
 
-    public OddNumbersExterminator(ArrayList<Integer> numbers)
-    {
-        this.numbers = numbers;
 
-    }
+  //  public OddNumbersExterminator(ArrayList<Integer> numbers)
+  //  {
+  //      this.numbers = numbers;
+//
+  //  }
 
     public ArrayList exterminate (ArrayList <Integer> numbers){
 
