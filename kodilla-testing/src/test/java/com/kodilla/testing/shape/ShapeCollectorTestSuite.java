@@ -36,7 +36,7 @@ public class ShapeCollectorTestSuite {
 
 
         //Then
-        Assert.assertEquals(1, list1.size());
+        Assert.assertEquals(1, collector.showFigures());
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ShapeCollectorTestSuite {
         boolean result = collector.removeFigure(triangle);
         //Then
         Assert.assertTrue(result);
-        Assert.assertEquals(0,list1.size());
+        Assert.assertEquals(0,collector.showFigures());
     }
 
     @Test
@@ -58,7 +58,6 @@ public class ShapeCollectorTestSuite {
         //Given
         Triangle triangle = new Triangle(2,3);
         Square square = new Square(2);
-        ArrayList list1 = new ArrayList();
         ShapeCollector collector = new ShapeCollector();
         collector.addFigure(triangle);
         collector.addFigure(square);
