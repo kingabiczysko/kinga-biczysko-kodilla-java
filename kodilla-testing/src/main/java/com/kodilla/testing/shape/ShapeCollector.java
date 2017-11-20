@@ -26,6 +26,7 @@ public class ShapeCollector {
     }
 
     public int showFigures(){
+        System.out.println(list.toArray());
         return list.size();
 
     }
