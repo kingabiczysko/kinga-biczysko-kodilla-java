@@ -12,7 +12,7 @@ public class Square implements Shape {
         return "Square";
     }
 
-    public double getField(double a) {
+    public double getField() {
         return a * a;
     }
 }

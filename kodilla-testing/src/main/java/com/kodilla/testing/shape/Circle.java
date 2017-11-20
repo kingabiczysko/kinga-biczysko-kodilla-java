@@ -14,7 +14,8 @@ public class Circle implements Shape {
         return "Circle";
     }
 
-    public double getField(double r) {
+    @Override
+    public double getField() {
         double pi = 3.14;
         return pi * r * r;
     }

@@ -15,7 +15,7 @@ public class Triangle implements Shape {
         return "Triangle";
     }
 
-    public double getField (double a,double h) {
+    public double getField () {
         return a * h / 2;
     }
 }
