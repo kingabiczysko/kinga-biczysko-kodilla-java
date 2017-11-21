@@ -29,7 +29,6 @@ dependencies {
 	//Test dependencies
 	testCompile ('junit:junit:4.12')
 	testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.8.RELEASE'
-	// https://mvnrepository.com/artifact/org.mockito/mockito-all
 	testCompile('org.mockito:mockito-all:1.10.19')
 
 
