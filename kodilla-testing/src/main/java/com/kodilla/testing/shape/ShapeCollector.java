@@ -17,13 +17,11 @@ public class ShapeCollector {
 
     //2
     public boolean removeFigure (Shape shape){
-        boolean result = false;
         if(list.contains(shape))
         {
-            list.remove(shape);
-            result = true;
+            return list.remove(shape);
         }
-        return result;
+        return false;
     }
 
     //3
