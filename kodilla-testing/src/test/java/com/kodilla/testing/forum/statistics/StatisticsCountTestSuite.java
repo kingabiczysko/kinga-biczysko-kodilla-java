@@ -36,7 +36,8 @@ public class StatisticsCountTestSuite {
 
         //When
 
-        int quantityOfUsers = statisticsCount.calculateAdvStatistics(statisticsMock).get(0);
+        statisticsCount.calculateAdvStatistics(statisticsMock);
+        int quantityOfUsers = statisticsCount.userQuantity;
 
         //Then
         Assert.assertEquals(2,quantityOfUsers);
@@ -67,8 +68,8 @@ public class StatisticsCountTestSuite {
 
 
         //When
-
-        int quantityPostPerUser = statisticsCount.calculateAdvStatistics(statisticsMock).get(3);
+        statisticsCount.calculateAdvStatistics(statisticsMock);
+        int quantityPostPerUser = statisticsCount.averagePostPerUser;
 
         //Then
         Assert.assertEquals(500,quantityPostPerUser);
@@ -100,8 +101,8 @@ public class StatisticsCountTestSuite {
 
 
         //When
-
-        int quantityOfCommentsPerPost = statisticsCount.calculateAdvStatistics(statisticsMock).get(5);
+        statisticsCount.calculateAdvStatistics(statisticsMock);
+        int quantityOfCommentsPerPost = statisticsCount.averageCommentsPerPost;
 
         //Then
         Assert.assertEquals(0,quantityOfCommentsPerPost);
@@ -131,8 +132,8 @@ public class StatisticsCountTestSuite {
 
 
         //When
-
-        int quantityOfCommentsPerPost = statisticsCount.calculateAdvStatistics(statisticsMock).get(5);
+        statisticsCount.calculateAdvStatistics(statisticsMock);
+        int quantityOfCommentsPerPost = statisticsCount.averageCommentsPerPost;
 
         //Then
         Assert.assertEquals(0.5,quantityOfCommentsPerPost,0.5);
@@ -163,8 +164,8 @@ public class StatisticsCountTestSuite {
 
 
         //When
-
-        int quantityOfCommentsPerPost = statisticsCount.calculateAdvStatistics(statisticsMock).get(5);
+        statisticsCount.calculateAdvStatistics(statisticsMock);
+        int quantityOfCommentsPerPost = statisticsCount.averageCommentsPerPost;
 
         //Then
         Assert.assertEquals(2,quantityOfCommentsPerPost);
@@ -192,8 +193,8 @@ public class StatisticsCountTestSuite {
 
 
         //When
-
-        int quantityOfUsers = statisticsCount.calculateAdvStatistics(statisticsMock).get(0);
+        statisticsCount.calculateAdvStatistics(statisticsMock);
+        int quantityOfUsers = statisticsCount.userQuantity;
 
         //Then
         Assert.assertEquals(0,quantityOfUsers);
@@ -226,8 +227,8 @@ public class StatisticsCountTestSuite {
 
 
         //When
-
-        int quantityOfPostPerUser = statisticsCount.calculateAdvStatistics(statisticsMock).get(3);
+        statisticsCount.calculateAdvStatistics(statisticsMock);
+        int quantityOfPostPerUser = statisticsCount.averagePostPerUser;
 
         //Then
         Assert.assertEquals(4, quantityOfPostPerUser);

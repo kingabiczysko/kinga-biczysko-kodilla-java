@@ -1,49 +1,53 @@
 package com.kodilla.testing.forum.statistics;
 
-import java.util.ArrayList;
-
 public class StatisticsCount {
 
     Statistics statistics;
-
+    int userQuantity;
+    int postQuantity;
+    int commentsQuantity;
+    int averagePostPerUser;
+    int averageCommentsPerUser;
+    int averageCommentsPerPost;
 
     public StatisticsCount(Statistics statistics) {
         this.statistics = statistics;
     }
 
-    ArrayList<Integer> staticsticsList = new ArrayList<Integer>();
-
 
     //method 1
-    public ArrayList<Integer> calculateAdvStatistics (Statistics statistics){
+    public void calculateAdvStatistics (Statistics statistics){
 
 
-        staticsticsList.add(0,statistics.usersNames().size());
-        staticsticsList.add(1,statistics.postsCount());
-        staticsticsList.add(2,statistics.commentsCount());
+        userQuantity = statistics.usersNames().size();
+        postQuantity = statistics.postsCount();
+        commentsQuantity = statistics.commentsCount();
 
         if(statistics.usersNames().size()==0){
-            staticsticsList.add(3,0);
-            staticsticsList.add(4,0);
+            averagePostPerUser = 0;
+           averageCommentsPerUser =0;
         } else {
-            staticsticsList.add(3, statistics.postsCount() / statistics.usersNames().size());
-            staticsticsList.add(4,statistics.commentsCount()/statistics.usersNames().size());
+           averagePostPerUser = statistics.postsCount() / statistics.usersNames().size();
+          averageCommentsPerUser = statistics.commentsCount()/statistics.usersNames().size();
         }
 
         if(statistics.postsCount()==0){
-            staticsticsList.add(5,0);
+            averageCommentsPerPost = 0;
         }else {
-            staticsticsList.add(5, statistics.commentsCount() / statistics.postsCount());
+            averageCommentsPerPost = statistics.commentsCount() / statistics.postsCount();
         }
 
-
-        return staticsticsList;
    }
 
    //method 2
    public void showStatistics(){
        System.out.println("Statistics:");
-       System.out.println(staticsticsList.toArray());
+       System.out.println("Number of Users: "+ userQuantity +".");
+       System.out.println("Number of Posts: "+ postQuantity +".");
+       System.out.println("Number of Comments: "+ commentsQuantity +".");
+       System.out.println("Average Quantity of Posts per User: "+ averagePostPerUser +".");
+       System.out.println("Average Quantity of Comments per User: "+ averageCommentsPerUser +".");
+       System.out.println("Average Quantity of Comments per Posts: "+ averageCommentsPerPost +".");
    }
 
 
