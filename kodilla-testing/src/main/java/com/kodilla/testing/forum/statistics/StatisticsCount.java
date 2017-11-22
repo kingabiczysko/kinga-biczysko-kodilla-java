@@ -21,9 +21,20 @@ public class StatisticsCount {
         staticsticsList.add(0,statistics.usersNames().size());
         staticsticsList.add(1,statistics.postsCount());
         staticsticsList.add(2,statistics.commentsCount());
-        staticsticsList.add(3,statistics.postsCount() / statistics.usersNames().size());
-        staticsticsList.add(4,statistics.commentsCount()/statistics.usersNames().size());
-        staticsticsList.add(5,statistics.commentsCount()/statistics.postsCount());
+
+        if(statistics.usersNames().size()==0){
+            staticsticsList.add(3,0);
+            staticsticsList.add(4,0);
+        } else {
+            staticsticsList.add(3, statistics.postsCount() / statistics.usersNames().size());
+            staticsticsList.add(4,statistics.commentsCount()/statistics.usersNames().size());
+        }
+
+        if(statistics.postsCount()==0){
+            staticsticsList.add(5,0);
+        }else {
+            staticsticsList.add(5, statistics.commentsCount() / statistics.postsCount());
+        }
 
 
         return staticsticsList;
