@@ -30,9 +30,8 @@ public class BookLibrary {
 
         List<Book> bookListPerUser = new ArrayList<Book>();
         LibraryUser libraryUser1 = new LibraryUser("Ann", "Kowalski", "123456789");
-        Book bookUser1 = new Book ("Book", "The author", 2017);
-        bookListPerUser.add(bookUser1);
-        //temp
+        List<Book> resultlist = libraryDatabase.listBooksInHandsOf(libraryUser1);
+        bookListPerUser = resultlist;
         return bookListPerUser;
     }
 
