@@ -22,7 +22,9 @@ repositories {
 	mavenCentral()
 }
 
-
+bootRepackage {
+	mainClass = 'com.kodilla.stream.StreamMain'
+}
 dependencies {
 	//External dependencies
 	compile('org.springframework.boot:spring-boot-starter-web')
