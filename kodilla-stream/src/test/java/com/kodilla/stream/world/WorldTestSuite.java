@@ -10,13 +10,13 @@ public class WorldTestSuite {
     public void getPeopleQuantity(){
         // Given
 
-        Country polska = new Country(new BigDecimal("38 000 000"));
-        Country niemcy = new Country(new BigDecimal("81 000 000"));
-        Country francja = new Country(new BigDecimal("67 000 000"));
-        Country usa = new Country(new BigDecimal("327 000 000"));
-        Country meksyk = new Country(new BigDecimal("125 000 000"));
-        Country rosja = new Country(new BigDecimal("142 000 000"));
-        Country chiny = new Country(new BigDecimal("1 379 000 000"));
+        Country polska = new Country(new BigDecimal("38000000"));
+        Country niemcy = new Country(new BigDecimal("81000000"));
+        Country francja = new Country(new BigDecimal("67000000"));
+        Country usa = new Country(new BigDecimal("327000000"));
+        Country meksyk = new Country(new BigDecimal("125000000"));
+        Country rosja = new Country(new BigDecimal("142000000"));
+        Country chiny = new Country(new BigDecimal("1379000000"));
 
         Continent europa = new Continent();
         europa.addCountry(polska);
