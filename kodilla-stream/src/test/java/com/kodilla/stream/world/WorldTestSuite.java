@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
 
 public class WorldTestSuite {
     @Test
@@ -21,27 +19,24 @@ public class WorldTestSuite {
         Country chiny = new Country(new BigDecimal("1 379 000 000"));
 
         Continent europa = new Continent();
-        Set<Country> europaSet = new HashSet<>();
-            europaSet.add(polska);
-            europaSet.add(niemcy);
-            europaSet.add(francja);
+        europa.addCountry(polska);
+        europa.addCountry(niemcy);
+        europa.addCountry(francja);
+
 
 
         Continent ameryka = new Continent();
-        Set<Country> amerykaSet = new HashSet<>();
-        amerykaSet.add(usa);
-        amerykaSet.add(meksyk);
+        ameryka.addCountry(usa);
+        ameryka.addCountry(meksyk);
 
         Continent azja = new Continent();
-        Set<Country>azjaSet = new HashSet<>();
-        azjaSet.add(rosja);
-        azjaSet.add(chiny);
+        azja.addCountry(rosja);
+        azja.addCountry(chiny);
 
         World world = new World();
-        Set<Continent>worldSet = new HashSet<>();
-        worldSet.add(europa);
-        worldSet.add(ameryka);
-        worldSet.add(azja);
+        world.addContinent(europa);
+        world.addContinent(ameryka);
+        world.addContinent(azja);
 
 
 
