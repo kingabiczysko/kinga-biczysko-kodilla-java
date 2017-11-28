@@ -31,7 +31,7 @@ public class World {
         return continentSet.stream()
                 .flatMap(country -> country.getCountrySet().stream())
                 .map(Country::getPeopleQuantityForCountry)
-                .reduce(BigDecimal.ONE,(sum, current)->sum.add(current));
+                .reduce(BigDecimal.ZERO,(sum, current)->sum.add(current));
 
     }
 }

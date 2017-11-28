@@ -46,7 +46,7 @@ public class WorldTestSuite {
 
 
         // Then
-        Assert.assertEquals(calculatedValue, new BigDecimal("2 159 000 000"));
+        Assert.assertEquals(calculatedValue, new BigDecimal("2159000000"));
 
     }
 }
