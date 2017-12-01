@@ -2,19 +2,8 @@ package com.kodilla.exception.test;
 
 public class FirstChallenge {
     public void divide(int a, int b) {
-
-        try {
-
-            double result = a / b;
-            System.out.println(result);
-
-
-        } catch (ArithmeticException e) {
-            System.out.println("Please check if your numbers are correct. Please remember that you can not divide by 0!");
-
-        } finally {
-            System.out.println("\nThank you for using our program. See you next time!");
-        }
+        double result = a / b;
+        System.out.println(result);
     }
 
 
@@ -28,7 +17,15 @@ public class FirstChallenge {
 
         FirstChallenge firstChallenge = new FirstChallenge();
 
-        firstChallenge.divide(3, 0);
+        try {
+            firstChallenge.divide(3, 0);
+
+        } catch (ArithmeticException e) {
+            System.out.println("Please check if your numbers are correct. \nPlease remember that you can not divide by 0!");
+
+        } finally {
+            System.out.println("\nThank you for using our program. See you next time!");
+        }
 
 
     }
