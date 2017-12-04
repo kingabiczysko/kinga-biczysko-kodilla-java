@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class FindFlight {
 
-    public static void findFlight(Flight flight) throws RuntimeException {
+    public static void findFlight(Flight flight) throws RouteNotFoundException {
 
         HashMap<String, Boolean> airportList = new HashMap<>();
         airportList.put("Berlin", true);
@@ -14,21 +14,26 @@ public class FindFlight {
         airportList.put("Alicante", false);
 
         String departureAirport = flight.getDepartureAirport();
-        Boolean checkDeparture = airportList.get(departureAirport);
-
         String arrivalAirport = flight.getArrivalAirport();
-        Boolean checkArrival = airportList.get(arrivalAirport);
 
-        if(checkDeparture == true && checkArrival == true){
-            System.out.println("The flight from " + departureAirport + " into "+ arrivalAirport + " is available.");
+        if(airportList.containsKey(departureAirport) && (airportList.containsKey(arrivalAirport))) {
+
+                Boolean checkDeparture = airportList.get(departureAirport);
+                Boolean checkArrival = airportList.get(arrivalAirport);
+
+                if (checkDeparture && checkArrival) {
+                    System.out.println("The flight from " + departureAirport + " into " + arrivalAirport + " is available.");
+                } else {
+                    System.out.println("The flight from " + departureAirport + " into " + arrivalAirport + " is not available.");
+                }
+
+            } else {
+                throw new RouteNotFoundException("Airport name not available to choose.");
+            }
+
+
         }
-        else {
-            System.out.println("The flight from " + departureAirport + " into "+ arrivalAirport + " is not available.");
-        }
 
-
-
-    }
 
     public static void main(String [] args){
         Flight flight1 = new Flight("Szczecin", "London");
@@ -37,8 +42,8 @@ public class FindFlight {
 
         try {
             findFlight.findFlight(flight1);
-        } catch (RuntimeException e) {
-            System.out.println("One of the airport is not available.");
+        } catch (RouteNotFoundException e) {
+            System.out.println("One of the airport is not available to choose.");
         } finally {
             System.out.println("\nThank you for using our search machine.");
         }
