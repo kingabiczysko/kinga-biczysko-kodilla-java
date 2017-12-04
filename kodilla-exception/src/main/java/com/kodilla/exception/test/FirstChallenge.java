@@ -1,7 +1,11 @@
 package com.kodilla.exception.test;
 
 public class FirstChallenge {
-    public void divide(int a, int b) {
+    public void divide(double a, double b) {
+        if (b==0){
+            throw new ArithmeticException();
+        }
+
         double result = a / b;
         System.out.println(result);
     }
