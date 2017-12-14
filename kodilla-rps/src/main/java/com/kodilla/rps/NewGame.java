@@ -75,15 +75,15 @@ public class NewGame {
         }
 
         System.out.println("\nPlayer:");
-        for(int i = 0; i<roundNumbers; i++) {
+        for(int i = 0; i<winnerRound; i++) {
             System.out.println(userChoosed.get(i));
         }
         System.out.println("\nComputer:");
-        for(int i = 0; i<roundNumbers; i++) {
+        for(int i = 0; i<winnerRound; i++) {
             System.out.println(computerChoosed.get(i));
         }
         System.out.println("\nRounds table:");
-        for(int i = 0; i<roundNumbers; i++) {
+        for(int i = 0; i<winnerRound; i++) {
             System.out.println(rounds[i]);
         }
 
