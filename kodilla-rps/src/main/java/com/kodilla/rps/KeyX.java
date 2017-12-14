@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class KeyX {
 
 
+    public boolean endGame(){
 
-    public static void endGame(){
+
         System.out.println("Are you really sure you would like to finish the game?");
         System.out.println("Please use the key 'y' for YES and 'n' for NO.");
 
@@ -16,8 +17,8 @@ public class KeyX {
 
         if (endOfTheGame=='y') {
             System.out.println("Thank you for good game today. Bye! See you next time!");
+            return true;
         }
-
-
+            return false;
     }
 }
