@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.OptionalDouble;
 
 import static java.util.stream.Collectors.toList;
 
@@ -149,27 +149,20 @@ public class BoardTestSuite {
         List<TaskList> actualTaskList = new ArrayList<>();
         actualTaskList.add(new TaskList("In progress"));
 
-        OptionalDouble averageDays;
 
-               averageDays = project.getTaskLists().stream()
+
+        Double averageDays = project.getTaskLists().stream()
                 .filter(actualTaskList::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(t -> t.getCreated())
-                .map(d -> d.compareTo(LocalDate.now()))
-                .mapToDouble(k -> -k)
-                .average();
-               // .getAsDouble();
-
-        double x =0;
-
-        if(averageDays.isPresent()) {
-            x = averageDays.getAsDouble();
-        }
-
+                .map(d -> ChronoUnit.DAYS.between(d, LocalDate.now()))
+                .mapToLong(k -> k)
+                .average()
+               .getAsDouble();
 
 
         //Then
-        Assert.assertEquals(10,x,0.01);
+        Assert.assertEquals(10,averageDays,0.01);
 
 
 
