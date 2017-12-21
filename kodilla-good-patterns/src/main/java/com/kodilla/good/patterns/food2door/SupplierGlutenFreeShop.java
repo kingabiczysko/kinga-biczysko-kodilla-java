@@ -8,7 +8,7 @@ public class SupplierGlutenFreeShop implements Supplier{
     public Transport transport;
     public FinalConfirmation finalConfirmation;
 
-    public String supplierName = "Gluten Free Shop";
+
 
     public SupplierGlutenFreeShop(final OrderAvailable orderAvailable, final Info info,
                                   final RepositoryGeneral repositoryGeneral, final Transport transport,
@@ -38,8 +38,5 @@ public class SupplierGlutenFreeShop implements Supplier{
         }
     }
 
-    @Override
-    public String getSupplierName() {
-        return supplierName;
-    }
+
 }

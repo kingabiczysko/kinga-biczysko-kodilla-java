@@ -1,34 +1,23 @@
 package com.kodilla.good.patterns.food2door;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ApplicationFood2Door {
 
     public static void main (String[] args) {
 
         OrderRequest orderRequest = new OrderRequest();
         Order order = orderRequest.retrieve();
+        int supplierNo = order.getSupplierNo();
 
+        Map<Integer,OrderAction> orderActionMap = new HashMap<>();
+        orderActionMap.put(1,new OrderAction1());
+        orderActionMap.put(2,new OrderAction2());
+        orderActionMap.put(3,new OrderAction3());
 
-        if (order.getSupplierNo() == 1) {
-            SupplierExtraFoodShop supplierExtraFoodShop = new SupplierExtraFoodShop
-                    (new OrderAvailableProduct(), new InfoMail(), new Repository1(),
-                            new TransportShop(), new FinalConfirmationMail());
-            supplierExtraFoodShop.process(order);
-        } else {
-            if (order.getSupplierNo() == 2) {
-                SupplierHealthyShop supplierHealthyShop = new SupplierHealthyShop(new OrderAvailableProduct(),
-                        new InfoMail(), new Repository1(), new TransportSupplier(), new FinalConfirmationMail());
-                supplierHealthyShop.process(order);
-            } else {
-                if (order.getSupplierNo() == 3) {
-                    SupplierGlutenFreeShop supplierGlutenFreeShop = new SupplierGlutenFreeShop
-                            (new OrderAvailableProduct(), new InfoMail(), new Repository1(),
-                                    new TransportSupplier(), new FinalConfirmationMail());
-                    supplierGlutenFreeShop.process(order);
-                } else {
-                    System.out.println("We do not offer purchase in that shop. Please choose the other one.");
-                }
-            }
-        }
+        orderActionMap.get(supplierNo).orderAction(order);
+
     }
 
 }

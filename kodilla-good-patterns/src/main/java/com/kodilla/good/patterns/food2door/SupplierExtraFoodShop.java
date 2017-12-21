@@ -3,7 +3,6 @@ package com.kodilla.good.patterns.food2door;
 
 public class SupplierExtraFoodShop implements Supplier {
 
-    public String supplierName = "ExtraFoodShop";
 
 
     public OrderAvailable orderAvailable;
@@ -43,8 +42,4 @@ public class SupplierExtraFoodShop implements Supplier {
 
     }
 
-    @Override
-    public String getSupplierName() {
-        return supplierName;
-    }
 }

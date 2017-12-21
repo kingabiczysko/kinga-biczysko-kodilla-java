@@ -8,7 +8,7 @@ public class SupplierHealthyShop implements Supplier{
     public Transport transport;
     public FinalConfirmation finalConfirmation;
 
-    public String supplierName = "Healthy Shop";
+
 
 
     public SupplierHealthyShop(final OrderAvailable orderAvailable, final Info info,
@@ -42,8 +42,6 @@ public class SupplierHealthyShop implements Supplier{
 
     }
 
-    @Override
-    public String getSupplierName() {
-        return supplierName;
-    }
+
+
 }

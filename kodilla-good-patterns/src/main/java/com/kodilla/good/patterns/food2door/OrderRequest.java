@@ -7,7 +7,7 @@ class OrderRequest {
         Product product = new Product("Carrot", 20);
         int orderNo = 122;
         int orderedQuantity = 2;
-        int supplierNo = 1;
+        int supplierNo = 3;
         FinalUser customer = new FinalUser(1, "Jaś", "Fasola", "Szczecin");
 
 
