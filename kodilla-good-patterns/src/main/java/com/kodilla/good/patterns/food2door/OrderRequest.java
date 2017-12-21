@@ -2,15 +2,9 @@ package com.kodilla.good.patterns.food2door;
 
 class OrderRequest {
 
-    public Order retrieve(){
-
-        Product product = new Product("Carrot", 20);
-        int orderNo = 122;
-        int orderedQuantity = 2;
-        int supplierNo = 3;
-        FinalUser customer = new FinalUser(1, "Jaś", "Fasola", "Szczecin");
 
 
+    public Order retrieve (Product product, int orderNo, int orderedQuantity, int supplierNo, FinalUser customer){
 
         return new com.kodilla.good.patterns.food2door.Order
                 (orderNo, supplierNo, product,orderedQuantity, customer.getUserAddress());
