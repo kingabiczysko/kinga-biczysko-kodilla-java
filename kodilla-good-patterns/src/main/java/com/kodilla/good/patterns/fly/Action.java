@@ -20,15 +20,13 @@ public final class Action {
             System.out.println("\nPlease choose the Departure Airport:\n");
             depAirport = keyboard.next();
             byDepartureAirport.findConnectionFromTheDepartureAirport(depAirport, flyTable);
-        } else {
-            if (search == 2) {
+        } else if (search == 2) {
                 ByArrivalAirport byArrivalAirport = new ByArrivalAirport();
                 System.out.println("\nPlease choose the Arrival Airport:\n");
                 arrAirport = keyboard.next();
                 byArrivalAirport.findConnectionToTheArrivalAirport(arrAirport, flyTable);
 
-            } else {
-                if (search == 3) {
+            } else if (search == 3) {
                     ByChangeAirport byChangeAirport = new ByChangeAirport();
                     System.out.println("Please choose the Departure Airport:\n");
                     depAirport = keyboard.next();
@@ -37,7 +35,7 @@ public final class Action {
                     byChangeAirport.findConnectionsByTheChangeAirport(depAirport,
                             arrAirport, flyTable);
                 }
-            }
-        }
+
+
     }
 }
