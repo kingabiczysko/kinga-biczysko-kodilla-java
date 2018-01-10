@@ -4,6 +4,7 @@ public final class ShoppingTask implements Task {
     private final String taskName;
     private final String whatToBuy;
     private final double quantity;
+    private boolean done = false;
 
     public ShoppingTask(final String taskName, final String whatToBuy, final double quantity) {
         this.taskName = taskName;
@@ -12,10 +13,10 @@ public final class ShoppingTask implements Task {
     }
 
     @Override
-    public int executeTask() {
+    public boolean executeTask() {
         System.out.println(taskName + " in progress.");
-        int done = 1;
-        return done ;
+        done = true;
+        return done;
     }
 
     @Override
@@ -24,9 +25,7 @@ public final class ShoppingTask implements Task {
     }
 
     @Override
-    public boolean isTaskExecuted(int done) {
-        if (done == 1) {
-            return true;
-        } else return false;
+    public boolean isTaskExecuted() {
+        return done;
     }
 }

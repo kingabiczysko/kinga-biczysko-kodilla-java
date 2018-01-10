@@ -16,9 +16,10 @@ public class TaskFactoryTestSuite {
         TaskFactory factory = new TaskFactory();
         //When
         Task shopping = factory.makeTask(TaskFactory.SHOPPINGTASK);
+        shopping.executeTask();
         //Then
         Assert.assertEquals("Shopping List 1", shopping.getTaskName());
-        Assert.assertEquals(true, shopping.isTaskExecuted(shopping.executeTask()));
+        Assert.assertEquals(true, shopping.isTaskExecuted());
 
     }
 
@@ -28,9 +29,10 @@ public class TaskFactoryTestSuite {
         TaskFactory factory = new TaskFactory();
         //When
         Task painting = factory.makeTask(TaskFactory.PAINTINGTASK);
+        painting.executeTask();
         //Then
         Assert.assertEquals("Ocean painting", painting.getTaskName());
-        Assert.assertEquals(true,painting.isTaskExecuted(painting.executeTask()));
+        Assert.assertEquals(true,painting.isTaskExecuted());
     }
     @Test
     public void testDrivingTask(){
@@ -38,9 +40,10 @@ public class TaskFactoryTestSuite {
         TaskFactory factory = new TaskFactory();
         //When
         Task driving = factory.makeTask(TaskFactory.DRIVINGTASK);
+        driving.executeTask();
         //Then
         Assert.assertEquals("Going to the cinema", driving.getTaskName());
-        Assert.assertEquals(true, driving.isTaskExecuted(driving.executeTask()));
+        Assert.assertEquals(true, driving.isTaskExecuted());
 
     }
 }
