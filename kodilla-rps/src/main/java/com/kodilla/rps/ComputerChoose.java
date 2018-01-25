@@ -8,7 +8,7 @@ public class ComputerChoose {
     public int generatingComputerChoose() {
 
         Random randomGenerator = new Random();
-        int computerChoose = randomGenerator.nextInt(3)+1;
+        int computerChoose = randomGenerator.nextInt(5)+1;
         return computerChoose;
     }
 
