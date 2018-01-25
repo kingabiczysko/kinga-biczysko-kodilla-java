@@ -1,23 +1,19 @@
 package com.kodilla.rps;
 
 public class User {
-    String user;
+    String userName;
+    int winningRounds;
 
-    public User() {
-        this.user = user;
+    public User(String userName, int winningRounds) {
+        this.userName = userName;
+        this.winningRounds = winningRounds;
     }
 
-    public String getUser() {
-        return user;
+    public String getUserName() {
+        return userName;
     }
 
-
-
-    public void setUser(String user) {
-        this.user = user;
+    public int getWinningRounds() {
+        return winningRounds;
     }
-
-
-
-
 }

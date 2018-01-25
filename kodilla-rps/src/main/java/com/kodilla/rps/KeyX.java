@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class KeyX {
 
-
     public boolean endGame(){
-
 
         System.out.println("Are you really sure you would like to finish the game?");
         System.out.println("Please use the key 'y' for YES and 'n' for NO.");

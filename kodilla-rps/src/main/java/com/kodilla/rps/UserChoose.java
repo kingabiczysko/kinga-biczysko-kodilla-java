@@ -1,5 +1,7 @@
 package com.kodilla.rps;
 
-public class Key1 {
+public class UserChoose {
+
+
 
 }
