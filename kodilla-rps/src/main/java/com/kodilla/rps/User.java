@@ -1,10 +1,10 @@
 package com.kodilla.rps;
 
-public class User {
-    String userName;
-    int winningRounds;
+public final class User {
+    public final String userName;
+    public final int winningRounds;
 
-    public User(String userName, int winningRounds) {
+    public User(final String userName, final int winningRounds) {
         this.userName = userName;
         this.winningRounds = winningRounds;
     }

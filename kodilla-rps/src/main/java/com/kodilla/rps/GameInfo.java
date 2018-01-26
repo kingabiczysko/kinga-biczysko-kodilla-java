@@ -1,6 +1,6 @@
 package com.kodilla.rps;
 
-public class GameInfo {
+public final class GameInfo {
 
    public static void gameinfo(){
        System.out.println("\nBefore we start, please find some rules:");

@@ -2,7 +2,7 @@ package com.kodilla.rps;
 
 import java.util.Random;
 
-public class ComputerChoose {
+public final class ComputerChoose {
 
 
     public int generatingComputerChoose() {

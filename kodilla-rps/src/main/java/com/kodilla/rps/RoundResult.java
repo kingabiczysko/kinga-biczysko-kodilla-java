@@ -1,11 +1,11 @@
 package com.kodilla.rps;
 
 public final class RoundResult {
-    int userChoose1;
-    int computerChoose1;
-    int score;
+    private final int userChoose1;
+    private final int computerChoose1;
+    private int score;
 
-    public RoundResult(int userChoose1, int computerChoose1) {
+    public RoundResult(final int userChoose1, final int computerChoose1) {
         this.userChoose1 = userChoose1;
         this.computerChoose1 = computerChoose1;
     }
