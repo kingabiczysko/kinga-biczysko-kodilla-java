@@ -9,15 +9,17 @@ public final class GameSummary {
         this.computerWins = computerWins;
     }
 
-    public void gameSummary(){
+    public String gameSummary(){
         System.out.println("\n<<<<GAME FINISHED>>>>");
         System.out.println("Summary:");
         System.out.println("        User win: "+userWins +".");
         System.out.println("        Computer win: " + computerWins + ".");
         if(userWins>computerWins){
             System.out.println("<<<<USER wins!!!!>>>>");
+            return "<<<<USER wins!!!!>>>>";
         } else {
             System.out.println("<<<<COMPUTER wins!!!!>>>>");
+            return "<<<<COMPUTER wins!!!!>>>>";
         }
     }
 }
