@@ -35,7 +35,7 @@ public class RpsRunner {
                 newGame.newGame();
             } else if (key == 'x') {
                 KeyX x = new KeyX();
-                end = x.endGame();
+                end = x.endGame(new KeyXAsker(System.in, System.out));
             } else {
                 System.out.println("Wrong key. Please start again.");
             }

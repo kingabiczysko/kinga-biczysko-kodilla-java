@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public final class NewGame {
+public final class NewGame{
 
     private final int winnerRounds;
 
@@ -30,6 +30,7 @@ public final class NewGame {
             System.out.println("\nRound no "+r+". \nPlease choose 1 (STONE), 2 (PAPER), 3 (SCISSORS)," +
                     " 4 (LIZARD), 5 (SPOCK):");
             int userChoose1 = keyboard.nextInt();
+
             if(userChoose1>0 && userChoose1<6){
                 userChoosed.add(userChoose1);
             } else {

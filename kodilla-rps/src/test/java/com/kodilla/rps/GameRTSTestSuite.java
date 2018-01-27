@@ -7,6 +7,10 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class GameRTSTestSuite {
 
     @Before
@@ -50,18 +54,19 @@ public class GameRTSTestSuite {
         Assert.assertEquals(result3,2);
     }
 
-//     @Test
-//    public void endGameTest(){
-//        //Given
-//        KeyX keyX = new KeyX();
-//        //When
-//
-//        char endOfTheGame = 'y';
-//
-//        //Then
-//        Assert.assertTrue(keyX.endGame());
-//
-//    }
+     @Test
+    public void endGameTestWithMock(){
+        //Given
+        KeyXAsker asker = mock(KeyXAsker.class);
+
+        //When
+         when(asker.ask(anyString())).thenReturn('y');
+        KeyX keyX = new KeyX();
+
+
+        //Then
+        Assert.assertEquals(keyX.endGame(asker),true);
+    }
 
 
 
