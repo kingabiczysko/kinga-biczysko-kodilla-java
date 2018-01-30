@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 public class Item {
     private int id;
     private Product product;
-    private BigDecimal price;
+    private BigDecimal price=new BigDecimal(0);
     private int quantity;
-    private BigDecimal value;
+    private BigDecimal value = new BigDecimal(0);
 
     public Item() {
     }
@@ -64,7 +64,7 @@ public class Item {
         this.id = id;
     }
 
-    private void setProduct(Product product) {
+    public void setProduct(Product product) {
         this.product = product;
     }
 
@@ -76,7 +76,7 @@ public class Item {
         this.quantity = quantity;
     }
 
-    private void setValue(BigDecimal value) {
+    public void setValue(BigDecimal value) {
         this.value = value;
     }
 }

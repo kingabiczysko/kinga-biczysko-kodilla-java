@@ -44,4 +44,8 @@ public class Product {
     private void setName(String name) {
         this.name = name;
     }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
 }
