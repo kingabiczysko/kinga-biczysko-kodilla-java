@@ -18,6 +18,10 @@ public class InvoiceDaoTestSuite {
 
 @Autowired
 InvoiceDao invoiceDao;
+@Autowired
+ItemDao itemDao;
+//@Autowired
+//ProductDao productDao;
 
     @Test
     public void testInvoiceDaoSave(){
@@ -41,6 +45,9 @@ InvoiceDao invoiceDao;
         product3.setItem(item1);
 
         //When
+        itemDao.save(item1);
+        itemDao.save(item2);
+        itemDao.save(item3);
         invoiceDao.save(invoice1);
 
         int idInvoice = invoice1.getId();
@@ -53,6 +60,6 @@ InvoiceDao invoiceDao;
 
 
         //CleanUp
-      //  invoiceDao.delete(idInvoice);
+        invoiceDao.delete(idInvoice);
     }
 }

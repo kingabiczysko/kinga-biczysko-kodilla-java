@@ -12,6 +12,7 @@ public class Item {
     private BigDecimal price = BigDecimal.ZERO;
     private int quantity;
     private BigDecimal value = BigDecimal.ZERO;
+    private Invoice invoice;
 
     public Item() {
     }
@@ -33,7 +34,7 @@ public class Item {
 
     @OneToMany(
             targetEntity = Product.class,
-            mappedBy = "PRODUCT",
+            mappedBy = "ITEM_ID",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
@@ -59,6 +60,12 @@ public class Item {
         return value;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "INVOICE_ID")
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
     private void setId(int id) {
         this.id = id;
     }
@@ -77,5 +84,9 @@ public class Item {
 
     public void setValue(BigDecimal value) {
         this.value = value;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
 }
