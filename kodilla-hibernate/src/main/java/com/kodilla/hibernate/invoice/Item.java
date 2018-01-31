@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 public class Item {
     private int id;
     private Product product;
-    private BigDecimal price=new BigDecimal(0);
+    private BigDecimal price = BigDecimal.ZERO;
     private int quantity;
-    private BigDecimal value = new BigDecimal(0);
+    private BigDecimal value = BigDecimal.ZERO;
 
     public Item() {
     }
@@ -37,7 +37,6 @@ public class Item {
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
-    @JoinColumn(name = "PRODUCT_ID")
     public Product getProduct() {
         return product;
     }
