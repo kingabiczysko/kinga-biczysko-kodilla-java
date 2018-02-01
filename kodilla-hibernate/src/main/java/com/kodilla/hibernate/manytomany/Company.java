@@ -6,6 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+@NamedNativeQuery(
+        name = "Company.retrieveCompanyNameBasedOn3Digits",
+        query = "SELECT * FROM COMPANIES WHERE LEFT(COMPANY_NAME,3) = : DIGITS ",
+        resultClass = Company.class
+)
 
 @Entity
 @Table(name = "COMPANIES")
