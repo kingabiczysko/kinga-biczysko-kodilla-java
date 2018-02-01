@@ -8,7 +8,7 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.retrieveCompanyNameBasedOn3Digits",
-        query = "SELECT * FROM COMPANIES WHERE LEFT(COMPANY_NAME,3) = : DIGITS ",
+        query = "SELECT * FROM COMPANIES WHERE LEFT(COMPANY_NAME,3) = :COMPANY_NAME ",
         resultClass = Company.class
 )
 
