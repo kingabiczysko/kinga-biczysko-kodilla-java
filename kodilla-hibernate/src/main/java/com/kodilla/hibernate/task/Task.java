@@ -21,11 +21,11 @@ import java.util.Date;
         )
 })
 
-//@NamedNativeQuery(
-//        name = "Task.retrieveTaskWithEnoughTime",
-//        query = "SELECT * FROM TASK WHERE DATEDIFF (DATE_ADD(CREATED, INTERVAL DURATION DAY), NOW())>5",
-//        resultClass = Task.class
-//)
+@NamedNativeQuery(
+        name = "Task.retrieveTasksWithEnoughTime",
+        query = "SELECT * FROM TASKS WHERE DATEDIFF (DATE_ADD(CREATED, INTERVAL DURATION DAY), NOW())>5",
+        resultClass = Task.class
+)
 
 @Entity
 @Table(name= "TASKS")

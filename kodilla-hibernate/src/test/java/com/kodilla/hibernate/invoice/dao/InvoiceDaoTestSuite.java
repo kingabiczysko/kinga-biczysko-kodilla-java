@@ -41,31 +41,31 @@ ProductDao productDao;
         item1.setInvoice(invoice1);
         item2.setInvoice(invoice1);
 
-        product1.setItem(item1);
-        product2.setItem(item2);
+        product1.getItem().add(item1);
+        product2.getItem().add(item2);
 
         //When
 
-        productDao.save(product1);
-        productDao.save(product2);
-        itemDao.save(item1);
-        itemDao.save(item2);
+//        productDao.save(product1);
+//        productDao.save(product2);
+//        itemDao.save(item1);
+//        itemDao.save(item2);
         invoiceDao.save(invoice1);
 
         int id = invoice1.getId();
-        int idItem1 = item1.getId();
-        int idItem2 = item2.getId();
-        int idProduct1 = product1.getId();
-        int idProduct2 = product2.getId();
+//        int idItem1 = item1.getId();
+//        int idItem2 = item2.getId();
+//        int idProduct1 = product1.getId();
+//        int idProduct2 = product2.getId();
 
         //Then
         Assert.assertNotEquals(0,id);
 
         //CleanUp
-        productDao.delete(idProduct1);
-        productDao.delete(idProduct2);
-        itemDao.delete(idItem1);
-        itemDao.delete(idItem2);
+//        productDao.delete(idProduct1);
+//        productDao.delete(idProduct2);
+//        itemDao.delete(idItem1);
+//        itemDao.delete(idItem2);
         invoiceDao.delete(id);
 
 
