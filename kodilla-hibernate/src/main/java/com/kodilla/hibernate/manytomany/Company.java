@@ -35,7 +35,7 @@ public class Company {
     }
 
     @NotNull
-    @Column (name = "COMPANY_NAME")
+    @Column(name = "COMPANY_NAME")
     public String getName() {
         return name;
     }
@@ -56,4 +56,5 @@ public class Company {
     private void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
+
 }

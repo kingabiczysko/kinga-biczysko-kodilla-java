@@ -42,5 +42,17 @@ public class TestingMain {
         }
 
 */
+      String one = "jahjd";
+      String two = "hahaha";
+
+      one.concat(two);
+        System.out.println(one);
+
+
+        String three;
+        three=one+two;
+
+        System.out.println(three);
+
     }
 }
