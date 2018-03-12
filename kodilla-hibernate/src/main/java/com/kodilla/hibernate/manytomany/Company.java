@@ -11,6 +11,11 @@ import java.util.List;
         query = "SELECT * FROM COMPANIES WHERE LEFT(COMPANY_NAME,3) = :COMPANY_NAME ",
         resultClass = Company.class
 )
+//
+//@NamedNativeQuery(
+//        name = "Company.retrieveCompanyNameBasedOn3MiddleDigits",
+//        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE : %ARG% "
+//)
 
 @Entity
 @Table(name = "COMPANIES")
