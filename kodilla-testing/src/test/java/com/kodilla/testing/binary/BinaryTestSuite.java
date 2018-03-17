@@ -13,10 +13,10 @@ public class BinaryTestSuite {
         Binary binary = new Binary();
 
         //When
-        double result = binary.changeIntoInt(11101100);
+        double result = binary.changeIntoInt(1111111);
 
         //Then
-        Assert.assertEquals(236, result, 0);
+        Assert.assertEquals(127, result, 0);
 
     }
 }
