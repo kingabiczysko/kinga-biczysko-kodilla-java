@@ -54,6 +54,6 @@ public class StoredPostTestSuite {
         if(resultSet.next()){
             count_best = resultSet.getInt("COUNT_BEST");
         }
-        assertEquals(1, count_best);
+        assertEquals(3, count_best);
     }
 }
