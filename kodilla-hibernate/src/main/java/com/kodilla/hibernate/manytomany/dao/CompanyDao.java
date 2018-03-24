@@ -16,5 +16,8 @@ public interface CompanyDao extends CrudRepository<Company, Integer> {
     @Query (nativeQuery = true)
     List<Company> retrieveCompanyNameBasedOn3Digits(@Param("COMPANY_NAME") String name);
 
+    @Query
+    List<Company> retrieveCompanyNameByDigits (@Param("DIGITS") String name);
+
 
 }

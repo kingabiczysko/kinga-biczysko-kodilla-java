@@ -2,6 +2,7 @@ package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
+import com.kodilla.hibernate.manytomany.facade.Facade;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,6 +21,9 @@ public class CompanyDaoTestSuite {
 
     @Autowired
     EmployeeDao employeeDao;
+
+    @Autowired
+    Facade facade;
 
 
     @Test
@@ -163,5 +167,7 @@ public class CompanyDaoTestSuite {
         }
 
     }
+
+
 
 }

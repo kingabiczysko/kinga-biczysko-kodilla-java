@@ -7,10 +7,16 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQueries({
 @NamedQuery(
         name = "Employee.retrieveEmployeeByName",
         query = "FROM Employee WHERE lastname = :LASTNAME"
-)
+),
+
+@NamedQuery(
+        name = "Employee.retrieveEmployeeByDigits",
+        query = "FROM Employee WHERE lastname LIKE :DIGITS"
+)})
 
 
 @Service

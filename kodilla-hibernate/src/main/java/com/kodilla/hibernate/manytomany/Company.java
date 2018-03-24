@@ -1,5 +1,7 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.springframework.stereotype.Service;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -8,9 +10,15 @@ import java.util.List;
 @NamedNativeQuery(
         name = "Company.retrieveCompanyNameBasedOn3Digits",
         query = "SELECT * FROM COMPANIES WHERE LEFT(COMPANY_NAME,3) =:COMPANY_NAME ",
-        resultClass = Company.class)
+        resultClass = Company.class
+)
+@NamedQuery(
+        name = "Company.retrieveCompanyNameByDigits",
+        query = "FROM Company WHERE name LIKE :DIGITS"
+)
 
 
+@Service
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
