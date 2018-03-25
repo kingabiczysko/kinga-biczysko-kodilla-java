@@ -14,7 +14,7 @@ import java.util.List;
 )
 @NamedQuery(
         name = "Company.retrieveCompanyNameByDigits",
-        query = "FROM Company WHERE name LIKE :DIGITS"
+        query = "FROM Company WHERE name Like CONCAT('%', :DIGITS,'%')"
 )
 
 

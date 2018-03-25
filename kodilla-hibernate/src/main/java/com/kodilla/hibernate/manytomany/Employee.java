@@ -15,7 +15,7 @@ import java.util.List;
 
 @NamedQuery(
         name = "Employee.retrieveEmployeeByDigits",
-        query = "FROM Employee WHERE lastname LIKE :DIGITS"
+        query = "FROM Employee WHERE lastname LIKE CONCAT('%',:DIGITS,'%')"
 )})
 
 

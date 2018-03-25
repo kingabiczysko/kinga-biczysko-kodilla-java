@@ -58,7 +58,7 @@ public class CompanyFasadeTestSuite {
 
         //Then
 
-        facade.find("%Sof%", "%Smi%");
+        facade.find("Sof", "Smi");
 
         //CleanUp
         try {
