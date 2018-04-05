@@ -7,10 +7,12 @@ import java.util.Scanner;
 public final class NewGame{
 
     private final int winnerRounds;
+    private int userChoose1;
 
     public NewGame(final int winnerRounds) {
         this.winnerRounds = winnerRounds;
     }
+
     public void newGame() {
         List<String> typesName = new ArrayList<>();
         typesName.add(0,"Null");
@@ -27,16 +29,22 @@ public final class NewGame{
         int r=1;
 
         while (userWins<winnerRounds&&computerWins<winnerRounds){
+
             System.out.println("\nRound no "+r+". \nPlease choose 1 (STONE), 2 (PAPER), 3 (SCISSORS)," +
                     " 4 (LIZARD), 5 (SPOCK):");
-            int userChoose1 = keyboard.nextInt();
-
-            if(userChoose1>0 && userChoose1<6){
-                userChoosed.add(userChoose1);
-            } else {
-                System.out.println("Wrong key.");
+            if(keyboard.hasNextInt()) {
+                userChoose1 = keyboard.nextInt();
             }
-            System.out.println("Now computer is choosing...");
+            else{
+                String error = keyboard.next();
+                System.out.println(error + " is the wrong key.");
+            }
+                if(userChoose1>0 && userChoose1<6){
+                userChoosed.add(userChoose1);
+                } else {
+                System.out.println("Wrong key.");
+                }
+                System.out.println("Now computer is choosing...");
 
             ComputerChoose computerChoose = new ComputerChoose();
             int computerChoose1 = computerChoose.generatingComputerChoose();

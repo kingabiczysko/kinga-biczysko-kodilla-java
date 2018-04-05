@@ -18,7 +18,7 @@ import java.util.List;
 )
 
 
-@Service
+//@Service
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
